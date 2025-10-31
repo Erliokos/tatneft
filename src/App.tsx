@@ -1,12 +1,15 @@
 import styled from "styled-components"
+import { Weather } from "./components/Weather/Weather"
 
 
 function App() {
 
+
+
   return (
     <>
       <Container>
-        Hello
+        <Weather />
       </Container>
     </>
   )
