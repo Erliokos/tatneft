@@ -50,6 +50,18 @@ export const CityContainer = styled.div`
   `}
 `
 
+export const Button = styled.button`
+  padding: ${({ theme }) => theme.space[2]};
+  border-radius: ${({ theme }) => theme.space[1]};
+  background-color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary[200]};
+  };
+  
+  
+`
+
 export const PeriodButton = styled.button<{ $isSelect: boolean }>`
   padding: ${({ theme }) => theme.space[2]};
   border-radius: ${({ theme }) => theme.space[1]};
@@ -98,6 +110,8 @@ export const EmptyContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space[2]};
   height: 100%;
   min-height: 360px;
 `

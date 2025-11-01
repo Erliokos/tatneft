@@ -1,5 +1,5 @@
 import { useSeries } from 'components/WeathersWidget/hooks/useSeries'
-import { Block, ChartContainer, Container, EmptyContainer, ErrorSpan, Header, Span } from 'components/WeathersWidget/Styled'
+import { Block, Button, ChartContainer, Container, EmptyContainer, ErrorSpan, Header, Span } from 'components/WeathersWidget/Styled'
 import { useStoredCity } from 'hooks/useStorageCity'
 import { useWeatherQuery } from 'hooks/useWeatherQuery'
 import { useState } from 'react'
@@ -18,7 +18,7 @@ export function Weather({ id, defaultCity }: WeatherProps) {
   const { city: memoryCity, updateCity } = useStoredCity(id)
   const [city, setCity] = useState(memoryCity || defaultCity)
   const [periodHours, setPeriodHours] = useState(24)
-  const { data, isLoading, isError, error } = useWeatherQuery(city)
+  const { data, isLoading, isError, error, refetch } = useWeatherQuery(city)
 
   const series = useSeries(data, periodHours)
   const units = data?.hourly_units?.temperature_2m ?? '°C'
@@ -28,7 +28,7 @@ export function Weather({ id, defaultCity }: WeatherProps) {
       <Header>
         <CitySelector
           city={city}
-          onChange={val => {
+          onChange={(val) => {
             setCity(val)
             updateCity(val)
           }}
@@ -49,10 +49,13 @@ export function Weather({ id, defaultCity }: WeatherProps) {
           ) : (
             <EmptyContainer>
               <ErrorSpan>Нет данных для отображения</ErrorSpan>
+              <Button onClick={() => refetch()}>Повторить</Button>
             </EmptyContainer>
           )}
         </ChartContainer>
-        {!!series.length && <PeriodSelector value={periodHours} onChange={setPeriodHours} />}
+        {!!series.length && (
+          <PeriodSelector value={periodHours} onChange={setPeriodHours} />
+        )}
       </Block>
     </Container>
   )
