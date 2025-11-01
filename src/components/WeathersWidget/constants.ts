@@ -199,7 +199,7 @@ export const CAPITALS_LIST = [
 ] as const;
 
 
-export const PERIOD_OPTIONS = [6, 12, 24, 72, 168]
+export const PERIOD_OPTIONS = [6, 12, 24, 72, 168] as const
 
 type Capital = typeof CAPITALS_LIST[number]
 

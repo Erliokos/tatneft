@@ -1,5 +1,6 @@
 import { PERIOD_OPTIONS } from "components/WeathersWidget/constants"
 import { Footer, PeriodButton, PeriodContainer, Span } from "components/WeathersWidget/Styled"
+import { getPeriodName } from "components/WeathersWidget/utils"
 
 type PeriodSelectorProps = {
   value: number
@@ -16,7 +17,7 @@ export const PeriodSelector = ({ value, onChange }: PeriodSelectorProps) => (
           $isSelect={h === value}
           onClick={() => onChange(h)}
         >
-          {h}ч
+          {getPeriodName(h)}
         </PeriodButton>
       ))}
     </PeriodContainer>

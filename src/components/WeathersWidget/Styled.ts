@@ -58,6 +58,10 @@ export const PeriodButton = styled.button<{ $isSelect: boolean }>`
   color: ${({ $isSelect: active, theme }) =>
     active ? theme.colors.primary[100] : theme.colors.black};
   cursor: pointer;
+  font-size: ${({ theme }) => theme.fontSizes.xs};
+  ${media.md`
+    font-size: 0.75rem;
+  `}
 `
 export const MainContainer = styled.div`
   width: 100vw;
