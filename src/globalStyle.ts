@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -61,3 +62,26 @@ export const GlobalStyles = createGlobalStyle`
     height: auto;
   }
 `;
+
+export const media = {
+  sm: (styles: any) => css`
+    @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      ${styles}
+    }
+  `,
+  md: (styles: any) => css`
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      ${styles}
+    }
+  `,
+  lg: (styles: any) => css`
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      ${styles}
+    }
+  `,
+  xl: (styles: any) => css`
+    @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
+      ${styles}
+    }
+  `,
+}

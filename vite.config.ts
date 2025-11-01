@@ -13,6 +13,7 @@ export default defineConfig({
       'components': path.resolve(__dirname, './src/components'),
       'api': path.resolve(__dirname, './src/api'),
       'hooks': path.resolve(__dirname, './src/hooks'),
+      'globalStyle': path.resolve(__dirname, './src/globalStyle.ts'),
     },
   },
 })
