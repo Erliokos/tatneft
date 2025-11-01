@@ -1,5 +1,10 @@
 # Tatneft Weather Widget
 
+[![CI](https://github.com/USERNAME/tatneft/actions/workflows/ci.yml/badge.svg)](https://github.com/USERNAME/tatneft/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Приложение для отображения погодных данных с интерактивными графиками температуры в реальном времени.
 
 ## 🚀 Возможности
@@ -110,6 +115,20 @@ src/
 
 - Node.js 18+
 - npm или yarn
+
+## 🔄 CI/CD
+
+Проект настроен с GitHub Actions для автоматической проверки качества кода:
+
+- **CI workflow** — запускается при push и PR на ветки `main` и `develop`
+  - Проверка линтера (ESLint)
+  - Проверка типов TypeScript
+  - Проверка форматирования (Prettier)
+  - Сборка проекта
+
+- **PR Checks** — дополнительные проверки для Pull Requests
+  - Полный набор тестов
+  - Проверка размера бандла
 
 ## 📄 Лицензия
 
