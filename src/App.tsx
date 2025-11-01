@@ -1,16 +1,11 @@
-import styled from "styled-components"
-import { Weather } from "./components/Weather/Weather"
+import { WeathersWidget } from "components/WeathersWidget"
+
 
 
 function App() {
-
-
-
   return (
     <>
-      <Container>
-        <Weather />
-      </Container>
+      <WeathersWidget/>
     </>
   )
 }
@@ -18,8 +13,3 @@ function App() {
 export default App
 
 
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: red;
-`
