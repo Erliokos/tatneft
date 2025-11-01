@@ -1,9 +1,12 @@
 import { useMemo } from 'react'
-import type { WeatherData } from 'types/weather';
+import type { WeatherData } from 'types/weather'
 
 type Point = { t: string; v: number }
 
-export function useSeries(data: WeatherData | undefined, periodHours: number): Point[] {
+export function useSeries(
+  data: WeatherData | undefined,
+  periodHours: number
+): Point[] {
   return useMemo(() => {
     const times = data?.hourly?.time ?? []
     const temps = data?.hourly?.temperature_2m ?? []

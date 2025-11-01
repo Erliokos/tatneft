@@ -1,8 +1,6 @@
-import { CAPITALS_LIST } from "components/WeathersWidget/constants"
-import { CityContainer, Input, Text } from "components/WeathersWidget/Styled"
-import type { ChangeEvent } from "react"
-
-
+import { CAPITALS_LIST } from 'components/WeathersWidget/constants'
+import { CityContainer, Input, Text } from 'components/WeathersWidget/Styled'
+import type { ChangeEvent } from 'react'
 
 type CitySelectorProps = {
   city: string
@@ -16,9 +14,7 @@ export const CitySelector = ({ city, onChange }: CitySelectorProps) => {
 
   return (
     <CityContainer>
-      <Text>
-        Город:
-      </Text>
+      <Text>Город:</Text>
       <Input
         id="city-input"
         list="city-list"
@@ -27,7 +23,7 @@ export const CitySelector = ({ city, onChange }: CitySelectorProps) => {
         placeholder="Выберите или введите город"
       />
       <datalist id="city-list">
-        {CAPITALS_LIST.map(c => (
+        {CAPITALS_LIST.map((c) => (
           <option key={c} value={c} />
         ))}
       </datalist>

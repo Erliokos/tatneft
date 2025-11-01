@@ -195,14 +195,16 @@ export const CAPITALS_LIST = [
   'Hanoi',
   'Sana’a',
   'Lusaka',
-  'Harare'
-] as const;
-
+  'Harare',
+] as const
 
 export const PERIOD_OPTIONS = [6, 12, 24, 72, 168] as const
 
-type Capital = typeof CAPITALS_LIST[number]
+type Capital = (typeof CAPITALS_LIST)[number]
 
-export const CAPITALS = CAPITALS_LIST.reduce<Record<Capital, string>>((acc, item) => {
-  return {...acc, [item]: item}
-}, {} as Record<Capital, string> ) 
+export const CAPITALS = CAPITALS_LIST.reduce<Record<Capital, string>>(
+  (acc, item) => {
+    return { ...acc, [item]: item }
+  },
+  {} as Record<Capital, string>
+)

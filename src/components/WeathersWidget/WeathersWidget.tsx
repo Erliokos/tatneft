@@ -1,12 +1,8 @@
-import { Weather } from "./components/Weather/Weather"
-import { CAPITALS } from "./constants"
-import { MainContainer } from "./Styled"
-
-
-
+import { Weather } from './components/Weather/Weather'
+import { CAPITALS } from './constants'
+import { MainContainer } from './Styled'
 
 export function WeathersWidget() {
-
   return (
     <MainContainer>
       <Weather id="1" defaultCity={CAPITALS.Moscow} />
@@ -15,6 +11,3 @@ export function WeathersWidget() {
     </MainContainer>
   )
 }
-
-
-

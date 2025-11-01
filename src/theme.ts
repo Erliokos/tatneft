@@ -36,7 +36,7 @@ export const theme = {
       800: '#166534',
       900: '#14532d',
     },
-    error: "#FF0000",
+    error: '#FF0000',
     warning: {
       50: '#fffbeb',
       100: '#fef3c7',
@@ -51,7 +51,7 @@ export const theme = {
     },
     white: '#ffffff',
     black: '#000000',
-    background: '#343e40'
+    background: '#343e40',
   },
   fonts: {
     body: 'system-ui, -apple-system, sans-serif',
@@ -121,6 +121,6 @@ export const theme = {
     xl: '1280px',
     '2xl': '1536px',
   },
-};
+}
 
-export type Theme = typeof theme;
+export type Theme = typeof theme

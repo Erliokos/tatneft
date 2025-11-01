@@ -1,15 +1,11 @@
-import { WeathersWidget } from "components/WeathersWidget"
-
-
+import { WeathersWidget } from 'components/WeathersWidget'
 
 function App() {
   return (
     <>
-      <WeathersWidget/>
+      <WeathersWidget />
     </>
   )
 }
 
 export default App
-
-

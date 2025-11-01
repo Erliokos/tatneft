@@ -1,5 +1,14 @@
 import { useSeries } from 'components/WeathersWidget/hooks/useSeries'
-import { Block, Button, ChartContainer, Container, EmptyContainer, ErrorSpan, Header, Span } from 'components/WeathersWidget/Styled'
+import {
+  Block,
+  Button,
+  ChartContainer,
+  Container,
+  EmptyContainer,
+  ErrorSpan,
+  Header,
+  Span,
+} from 'components/WeathersWidget/Styled'
 import { useStoredCity } from 'hooks/useStorageCity'
 import { useWeatherQuery } from 'hooks/useWeatherQuery'
 import { useState } from 'react'
@@ -7,7 +16,6 @@ import { Chart } from '../Chart/Chart'
 import { CitySelector } from '../CitySelector/CitySelector'
 import { PeriodSelector } from '../PeriodSelector/PeriodSelector'
 import { SkeletonChart } from '../SkeletonChart/SkeletonChart'
-
 
 type WeatherProps = {
   id: string

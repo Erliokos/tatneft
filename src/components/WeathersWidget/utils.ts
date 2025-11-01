@@ -1,7 +1,9 @@
-import type { PERIOD_OPTIONS } from "./constants";
+import type { PERIOD_OPTIONS } from './constants'
 
-export const getPeriodName = (period: typeof PERIOD_OPTIONS[number]): string => {
-  switch(period){
+export const getPeriodName = (
+  period: (typeof PERIOD_OPTIONS)[number]
+): string => {
+  switch (period) {
     case 6:
       return '6 часов'
     case 12:

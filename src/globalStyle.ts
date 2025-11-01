@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -61,7 +61,7 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
-`;
+`
 
 export const media = {
   sm: (styles: any) => css`

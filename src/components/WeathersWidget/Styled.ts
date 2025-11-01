@@ -1,5 +1,5 @@
-import { media } from "globalStyle"
-import styled from "styled-components"
+import { media } from 'globalStyle'
+import styled from 'styled-components'
 
 export const Container = styled.div`
   padding: ${({ theme }) => theme.space[5]};
@@ -16,7 +16,6 @@ export const Input = styled.input`
   ${media.md`
     flex: 0;
   `}
-
 `
 export const Footer = styled.footer`
   display: flex;
@@ -35,7 +34,7 @@ export const Span = styled.span`
 
 export const ErrorSpan = styled(Span)`
   color: ${({ theme }) => theme.colors.error};
-`;
+`
 
 export const Text = styled.h3`
   color: ${({ theme }) => theme.colors.black};
@@ -57,9 +56,7 @@ export const Button = styled.button`
   cursor: pointer;
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary[200]};
-  };
-  
-  
+  }
 `
 
 export const PeriodButton = styled.button<{ $isSelect: boolean }>`

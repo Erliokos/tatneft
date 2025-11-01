@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled, { keyframes } from 'styled-components'
 
 export const SkeletonChart = () => {
   return (
@@ -34,12 +34,7 @@ const SkeletonWrapper = styled.div`
 const ShimmerOverlay = styled.div`
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    #f6f6f6 25%,
-    #ecebeb 50%,
-    #f6f6f6 75%
-  );
+  background: linear-gradient(90deg, #f6f6f6 25%, #ecebeb 50%, #f6f6f6 75%);
   background-size: 200% 100%;
   animation: ${shimmer} 1.6s linear infinite;
   z-index: 0;
