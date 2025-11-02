@@ -9,6 +9,7 @@ import {
   Header,
   Span,
 } from 'components/WeathersWidget/Styled'
+import { useDebounce } from 'hooks/useDebounce'
 import { useStoredCity } from 'hooks/useStorageCity'
 import { useWeatherQuery } from 'hooks/useWeatherQuery'
 import { useState } from 'react'
@@ -25,8 +26,9 @@ type WeatherProps = {
 export function Weather({ id, defaultCity }: WeatherProps) {
   const { city: memoryCity, updateCity } = useStoredCity(id)
   const [city, setCity] = useState(memoryCity || defaultCity)
+  const debouncedCity = useDebounce(city, 500)
   const [periodHours, setPeriodHours] = useState(24)
-  const { data, isLoading, isError, error, refetch } = useWeatherQuery(city)
+  const { data, isLoading, isError, error, refetch } = useWeatherQuery(debouncedCity)
 
   const series = useSeries(data, periodHours)
   const units = data?.hourly_units?.temperature_2m ?? '°C'
